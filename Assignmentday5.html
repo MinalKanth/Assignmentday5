@@ -1,24 +1,63 @@
-<DOCTYPE html>
-    <head>
-        <script>
-            function handleOnChangeEvent(x)
-            {
-                document.bgColor=x;
-            }
-        </script>
-    <body>
-       <center>
-           <div class="box"> <div style="width:150px;height:130px;border:2px solid;"><b>Change my colour</b></div></div>
-        <br><br>
-        <select onchange="handleOnChangeEvent(this.value)">
-        <div class="id">
-            <option value="id">Select a color</option>
-            <option value="red">Red</option>
-            <option value="blue">Blue</option>
-            <option value="green">green</option>
-        </div>
-        </select>
-    </center>
-         </body>
-    </head>
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColorShift JS</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            transition: background-color 0.4s ease;
+            margin-top: 100px;
+        }
+
+        .color-box {
+            width: 220px;
+            height: 120px;
+            border: 2px solid #333;
+            margin: 0 auto 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            background: #fff;
+        }
+
+        select {
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+
+    <script>
+        function changeThemeColor(color) {
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1>ColorShift JS</h1>
+
+    <div class="color-box">
+        Change My Background Color
+    </div>
+
+    <select onchange="changeThemeColor(this.value)">
+        <option value="">Select a Color</option>
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+        <option value="orange">Orange</option>
+        <option value="purple">Purple</option>
+    </select>
+
+</body>
+
 </html>
+```
